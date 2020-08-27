@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootswatch/dist/litera/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #33CAFF;
+}
+
+.h3-form-header{
+    color: white;
+    margin-bottom: 1em;
+}
+
+.login-frm-div {
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+}
+
+.body-content {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;    
+
+    flex-grow: 1;
+}
+
+footer {
+    margin-top:  10px;
+    padding: 5px;
+    width: 100%;
+    background-color: #4582EC;
+    color: white;
+}
+
+footer p{
+    margin-bottom: 5px;
+}
+
+table{
+    margin-bottom: 20px;
+    background: white;
+}
+
+table th {
+    font-size: 0.95rem;
+    padding-left: 7px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table tr {
+    height: 45px;
+}
+
+table td{
+    width: 200px;
+}

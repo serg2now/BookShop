@@ -1,0 +1,32 @@
+<div>
+    <h3 class="h3-form-header">Заказы</h3>
+
+    <h4 *ngIf="orders == null" class="h3-error">Ошибка при загрузке данных, сервер недоступен!</h4>
+
+    <div *ngIf="orders != null && orders.length > 0" class="mt-3">  
+            <div class="row">
+                <div class="col-md-9">
+                    <table id="orders" class="table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Дата заказа</th>
+                                <th>Название книжки</th>
+                                <th>ФИО заказчика</th>
+                                <th>Адрес доставки</th>
+                                <th>Стоимость заказа</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let order of orders">
+                            <tr>
+                                <td>{{order.orderDate}}</td>
+                                <td>{{order.bookFullName}}</td>
+                                <td>{{order.userFullName}}</td>
+                                <td>{{order.deliveryAdress}}</td>
+                                <td>{{order.orderCost}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>

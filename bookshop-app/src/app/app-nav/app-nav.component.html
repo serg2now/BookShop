@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">   
+    <a class="navbar-brand" [routerLink]="['/']">Book Shop</a>
+    <div class="container">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" *ngIf="loggedIn()">
+          <a class="nav-link" [routerLink]="['/books']" >Книги</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" *ngIf="loggedIn() && checkAdminRole()">
+          <a class="nav-link" [routerLink]="['/orders']" >Заказы</a>
+        </li>
+      </ul>
+  
+      <div *ngIf="loggedIn()" class="dropdown" dropdown>
+        <a class="dropdown-toggle text-light" dropdownToggle>
+         {{currentUser.userName}}
+        </a>
+  
+        <div class="dropdown-menu mt-3" *dropdownMenu>
+          <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out"></i>Выйти</a>
+        </div>
+      </div>
+    </div>
+    
+  </nav>
+

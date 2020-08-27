@@ -1,0 +1,21 @@
+<div style="text-align: center;">
+    <h3 class="h3-form-header">Добро пожаловать в Book Shop!</h3>
+
+    <img class="mt-3" src="../../assets/book.png" style="width: 100px; height: 100px;">
+
+    <p>Для того чтобы начать пользоваться сайтом войдите в свой аккаунт</p>
+
+    <div class="login-frm-div">
+           <form #loginForm="ngForm" class="mt-1" (ngSubmit)="login()">
+                  <input class="form-control mt-2" type="text" name="username" placeholder="Логин" required
+                         [(ngModel)]="model.username">
+                  <input class="form-control mt-2" type="password" name="password" placeholder="Пароль" required
+                         [(ngModel)]="model.password">
+
+                  <button [disabled]="!loginForm.valid" class="btn btn-success mt-2" type="submit">Войти</button>
+
+           </form>
+
+    </div>
+
+</div>
